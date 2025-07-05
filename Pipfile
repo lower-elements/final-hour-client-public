@@ -1,0 +1,31 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pygame = "*"
+pyenet = "*"
+pyperclip = "*"
+nuitka = "*"
+cryptography = "*"
+semver = "*"
+pysmartdl = "*"
+requests = "*"
+texteditor = "*"
+appdirs = "*"
+urlextract = "*"
+linkpreview = "*"
+psutil = "*"
+accessible_output2 = "*"
+urllib3 = "*"
+pydub = "*"
+cyal = "*"
+pyogg = {editable = true, ref = "master", git = "git+https://github.com/TeamPyOgg/PyOgg"}
+getmac = "*"
+
+[dev-packages]
+black = "*"
+
+[requires]
+python_version = "3.11"
