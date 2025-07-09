@@ -12,7 +12,6 @@ import sys
 from collections import namedtuple
 import enet
 import pygame
-from getmac import get_mac_address
 import cyal.util, cyal.exceptions
 import requests
 
@@ -210,13 +209,6 @@ class Game:
                     "username": options.get("username"),
                     "password": options.get("password"),
                 },
-            )
-            self.network.send(
-                consts.CHANNEL_MISC,
-                "new_mac_address",
-                {
-                    "address": get_mac_address()
-                }
             )
             self.replace(self.network.loop)
 

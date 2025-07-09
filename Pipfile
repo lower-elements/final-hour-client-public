@@ -22,7 +22,6 @@ urllib3 = "*"
 pydub = "*"
 cyal = "*"
 pyogg = {editable = true, ref = "master", git = "git+https://github.com/TeamPyOgg/PyOgg"}
-getmac = "*"
 
 [dev-packages]
 black = "*"
