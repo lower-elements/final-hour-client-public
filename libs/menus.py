@@ -102,8 +102,8 @@ def options_menu(game, func_call, replace_call=None, parent=None, in_game=False)
     m = menu.Menu(game, "Options menu", parrent=parent, )
     set_default_sounds(m)
     items=[
-        #(f"Server hostname: {options.get('host', consts.DEFAULT_HOST)}", lambda: configure_host(game, func_call, replace_call)),
-        #(f"Server port: {options.get('port', consts.DEFAULT_PORT)}", lambda: configure_port(game, func_call, replace_call)),
+        (f"Server hostname: {options.get('host', consts.DEFAULT_HOST)}", lambda: configure_host(game, func_call, replace_call)),
+        (f"Server port: {options.get('port', consts.DEFAULT_PORT)}", lambda: configure_port(game, func_call, replace_call)),
         (f"Select output device - currently set to {options.get('audio_device', '==============system default')[14:]}", lambda: output_menu(game, func_call=func_call if in_game else lambda: options_menu(game, func_call, replace_call=replace_call, parent=parent, in_game=in_game), replace_call=replace_call, parent=parent)),
         (f"Select input device - currently set to {options.get('audio_input_device', '==============system default')[14:]}", lambda: input_menu(game, func_call=func_call if in_game else lambda: options_menu(game, func_call, replace_call=replace_call, parent=parent, in_game=in_game), replace_call=replace_call, parent=parent, in_game=in_game)),
         (f"Voice Chat Jitter Buffer: {options.get('jitter_buffer', 60)}", lambda: configure_jitter_buffer(game, func_call, replace_call)),
